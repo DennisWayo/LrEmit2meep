@@ -18,32 +18,32 @@ The repository accompanies the manuscript:
 First-Principles Design of Quantum Emitters in PLD-Grown h-BN Monolayers for Scalable Photonic Integration
 
 and provides all scripts and workflows used to:
-	•	model defect-induced electronic states using spin-polarized DFT,
-	•	identify optically active transitions using linear-response TDDFT (LR-TDDFT),
-	•	correlate PDOS features with zero-phonon line (ZPL) energies, and
-	•	evaluate Purcell enhancement via MEEP-based FDTD simulations.
+- model defect-induced electronic states using spin-polarized DFT,
+- identify optically active transitions using linear-response TDDFT (LR-TDDFT),
+- correlate PDOS features with zero-phonon line (ZPL) energies, and
+- evaluate Purcell enhancement via MEEP-based FDTD simulations.
 
 ### Motivation 
 
 Solid-state single-photon emitters (SPEs) in h-BN have demonstrated room-temperature operation, chemical robustness, and compatibility with photonic platforms. Recent experiments on PLD-grown carbon-doped h-BN thin films report record brightness, narrow linewidths, and near-ideal photon purity. However, the microscopic electronic origin of these emitters and their compatibility with photonic cavities remain incompletely understood.
 
 LrEmit2meep addresses this gap by providing a unified, first-principles workflow that connects:
-	•	defect chemistry →
-	•	localized electronic states →
-	•	optical transitions (ZPLs) →
-	•	cavity-enhanced emission dynamics.
+- defect chemistry →
+- localized electronic states →
+- optical transitions (ZPLs) →
+- cavity-enhanced emission dynamics.
 
 ### Defects Studied
 
 The following defect configurations in monolayer h-BN are investigated:
-	•	Pristine h-BN (reference)
-	•	Boron vacancy (V_\mathrm{B})
-	•	Nitrogen vacancy (V_\mathrm{N})
-	•	Carbon substitution on boron site (C_\mathrm{B})
-	•	Carbon substitution on nitrogen site (C_\mathrm{N})
-	•	Carbon–nitrogen-vacancy complex (C–V_\mathrm{N})
+- Pristine h-BN (reference)
+- Boron vacancy (V_\mathrm{B})
+- Nitrogen vacancy (V_\mathrm{N})
+- Carbon substitution on boron site (C_\mathrm{B})
+- Carbon substitution on nitrogen site (C_\mathrm{N})
+- Carbon–nitrogen-vacancy complex (C–V_\mathrm{N})
 
-All models are based on a 5\times5 supercell with sufficient vacuum separation to eliminate spurious interactions.
+All models are based on a 5x5 supercell with sufficient vacuum separation to eliminate spurious interactions.
 
 ### Computational Workflow 
 
