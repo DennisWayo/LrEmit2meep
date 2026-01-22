@@ -22,4 +22,8 @@ tmp/
 # OS
 .DS_Store
 
+# IDEs
+.idea/
+.vscode/
+
 
