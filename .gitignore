@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# GPAW / DFT outputs
+*.gpw
+*.traj
+*.cube
+*.wfn
+
+# Large raw data (keep processed results only)
+raw_data/
+scratch/
+tmp/
+
+# OS
+.DS_Store

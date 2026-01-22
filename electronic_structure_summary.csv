@@ -1,0 +1,7 @@
+Defect,XC,Mode,Grid_spacing_h (Å),kpts,Spin_polarized,Occupation,Smearing (eV)
+hBN_5x5_C-VN,PBE,fd,0.25,"[1, 1, 1]",True,fermi-dirac,0.1
+hBN_5x5_CB,PBE,fd,0.25,"[1, 1, 1]",False,fermi-dirac,0.1
+hBN_5x5_CN,PBE,fd,0.25,"[1, 1, 1]",False,fermi-dirac,0.1
+hBN_5x5_VB,PBE,fd,0.25,"[1, 1, 1]",True,fermi-dirac,0.1
+hBN_5x5_VN,PBE,fd,0.25,"[1, 1, 1]",True,fermi-dirac,0.1
+hBN_5x5_pristine,PBE,fd,0.25,"[1, 1, 1]",False,fermi-dirac,0.1
