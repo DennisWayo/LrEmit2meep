@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28e2a3a6-bf69-4c63-8ca3-ebd7c7a3fca8" name="Changes" comment="" />
+    <list default="true" id="28e2a3a6-bf69-4c63-8ca3-ebd7c7a3fca8" name="Changes" comment="First-principles defect-to-cavity workflow for quantum emitters in h-BN using DFT, LR-TDDFT, and MEEP">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +21,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DennisWayo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DennisWayo/LrEmit2meep&quot;,
+    &quot;accountId&quot;: &quot;59dd2661-8c52-4d3a-b606-9deda7f09ff8&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/hBN_5x5_C-VN/hBN_5x5_C-VN_lrtddft.log" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/hBN_5x5_VB/hBN_5x5_VB_lrtddft.log" root0="SKIP_INSPECTION" />
@@ -32,39 +50,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.extract_atomic_models.executor": "Run",
-    "Python.extract_defect_electronic_metrics.executor": "Run",
-    "Python.extract_electronic_structure.executor": "Run",
-    "Python.nanobeam_harminv_2d.executor": "Run",
-    "Python.nanobeam_purcell_2d.executor": "Run",
-    "Python.plot.executor": "Run",
-    "Python.plot_all_defect_dos.executor": "Run",
-    "Python.plot_defect_dos_and_levels.executor": "Run",
-    "Python.plot_defect_electronic_properties.executor": "Run",
-    "Python.plot_pdos_bcn.executor": "Run",
-    "Python.plot_pdos_bcn_with_zpl.executor": "Run",
-    "Python.purcell_2d_fluxratio.executor": "Run",
-    "Python.table.executor": "Run",
-    "Python.zpl_purcell_table_and_tolerance.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/denniswayo/gpaw-DFT/LrEmit2meep",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.extract_atomic_models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_defect_electronic_metrics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_electronic_structure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nanobeam_harminv_2d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nanobeam_purcell_2d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_all_defect_dos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_defect_dos_and_levels.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_defect_electronic_properties.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_pdos_bcn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_pdos_bcn_with_zpl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.purcell_2d_fluxratio.executor&quot;: &quot;Run&quot;,
+    &quot;Python.table.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zpl_purcell_table_and_tolerance.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/denniswayo/gpaw-DFT/LrEmit2meep&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/emitter2chip" />
@@ -108,6 +127,9 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="28e2a3a6-bf69-4c63-8ca3-ebd7c7a3fca8" name="Changes" comment="" />
@@ -128,12 +150,25 @@
       <workItem from="1767616223050" duration="620000" />
       <workItem from="1767682001859" duration="781000" />
       <workItem from="1767731317382" duration="595000" />
-      <workItem from="1769070443477" duration="345000" />
+      <workItem from="1769070443477" duration="877000" />
     </task>
+    <task id="LOCAL-00001" summary="First-principles defect-to-cavity workflow for quantum emitters in h-BN using DFT, LR-TDDFT, and MEEP">
+      <option name="closed" value="true" />
+      <created>1769071140445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769071140445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First-principles defect-to-cavity workflow for quantum emitters in h-BN using DFT, LR-TDDFT, and MEEP" />
+    <option name="LAST_COMMIT_MESSAGE" value="First-principles defect-to-cavity workflow for quantum emitters in h-BN using DFT, LR-TDDFT, and MEEP" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/emitter2chip$extract_atomic_models.coverage" NAME="extract_atomic_models Coverage Results" MODIFIED="1766597393957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
