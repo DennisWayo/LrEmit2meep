@@ -62,7 +62,8 @@ Nanobeam cavity design, mode extraction, and Purcell enhancement
 	7.	Emitter–cavity spectral matching
 Quantitative assessment of radiative lifetime reduction
 
-<img width="6228" height="2548" alt="workflow" src="https://github.com/user-attachments/assets/5d453100-ec1a-4d3f-93cc-faad73fae5d6" />
+
+<img width="5048" height="2204" alt="workflow-3" src="https://github.com/user-attachments/assets/2f97521a-b271-454a-add5-90a504149e9f" />
 
 
 ### Key Results
