@@ -6,8 +6,7 @@
 ![Platform: Quantum Photonics](https://img.shields.io/badge/Platform-Quantum%20Photonics-black)
 ![Status: Research Code](https://img.shields.io/badge/Status-Research%20Code-yellow)
 ![Reproducibility](https://img.shields.io/badge/Reproducibility-Documented-success)
-![arXiv](https://img.shields.io/badge/arXiv-pending-b31b1b)
-![DOI](https://img.shields.io/badge/DOI-pending-blue)
+
 
 ## LrEmit2meep
 
