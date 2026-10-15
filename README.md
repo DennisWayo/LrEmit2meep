@@ -1,99 +1,21 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Language: Python](https://img.shields.io/badge/Language-Python%203.10+-brightgreen)
-![DFT: GPAW](https://img.shields.io/badge/DFT-GPAW-orange)
-![TDDFT: LR-TDDFT](https://img.shields.io/badge/TDDFT-Linear--Response-blueviolet)
-![Photonics: MEEP](https://img.shields.io/badge/Photonics-MEEP-red)
-![Platform: Quantum Photonics](https://img.shields.io/badge/Platform-Quantum%20Photonics-black)
-![Status: Research Code](https://img.shields.io/badge/Status-Research%20Code-yellow)
-![Reproducibility](https://img.shields.io/badge/Reproducibility-Documented-success)
+# LrEmit2meep
 
+This repository preserves an exploratory calculation workflow for point defects in monolayer hexagonal boron nitride (h-BN) and a separate two-dimensional nanobeam model. It accompanies the manuscript *Carbon Defects in Monolayer Hexagonal Boron Nitride for Quantum Light Sources: Optical Screening and Cavity Limits*.
 
-## LrEmit2meep
+## What the calculations show
 
-LrEmit2meep is a first-principles computational framework that links atomic-scale defect engineering in monolayer hexagonal boron nitride (h-BN) to cavity-enhanced quantum emission in integrated photonic structures.
+The archived neutral-defect screen used a 5 × 5 h-BN cell, PBE ground states, and GPAW linear-response TDDFT. Its reported optical features are **vertical excitation proxies**, not relaxed-emission zero-phonon lines (ZPLs). In particular, the archived 2.167 eV C_B feature cannot identify the emitter in a pulsed-laser-deposited film merely because its wavelength falls in a measured emission window. The archived C_B and C_N cells were also spin paired despite odd electron counts, and the archived spectrum used a nonstandard norm of GPAW's oscillator-strength components.
 
-The repository accompanies the manuscript:
+A separate matched, spin-polarized comparison in the manuscript gives dominant broadened vertical features of 2.483 eV for neutral C_B and 3.808 eV for neutral C_B–C_N–C_B (CBC) under one PBE/LR-TDDFT protocol. These values are screening descriptors. Cell size, response settings, structural alternatives, charge state, and relaxed emission remain to be converged or calculated. The comparison does not overturn the published CBC assignment based on broader evidence for the experimental film.
 
-First-Principles Design of Quantum Emitters in PLD-Grown h-BN Monolayers for Scalable Photonic Integration
+The archived photonic calculation reports a 611.2 nm Harminv mode with Q ≈ 176 in a two-dimensional effective-index nanobeam. Its sampled spectrum is a device-to-**air** local-density-of-states (LDOS) ratio, not an isolated cavity-only Purcell enhancement for an h-BN emitter. The largest sampled ratio, 3.57, occurs at the 550 nm boundary and is not established as a resonance. The ratio near the archived C_B proxy wavelength of 572.1 nm is about 0.94. These outputs do not establish cavity-enhanced emission or a reduced emitter lifetime.
 
-and provides all scripts and workflows used to:
-- model defect-induced electronic states using spin-polarized DFT,
-- identify optically active transitions using linear-response TDDFT (LR-TDDFT),
-- correlate PDOS features with zero-phonon line (ZPL) energies, and
-- evaluate Purcell enhancement via MEEP-based FDTD simulations.
+## Archive and reproduction
 
-### Motivation 
+The repository retains the original calculation scripts, input structures, and generated artifacts where present. Some legacy file and column names contain `zpl` or `purcell`; those names describe the historical workflow and **do not validate** ZPL energies or a cavity-only Purcell factor. The manuscript and its supplementary comparison supply the interpretation and the separate matched-comparison inputs, logs, spectra, and scripts.
 
-Solid-state single-photon emitters (SPEs) in h-BN have demonstrated room-temperature operation, chemical robustness, and compatibility with photonic platforms. Recent experiments on PLD-grown carbon-doped h-BN thin films report record brightness, narrow linewidths, and near-ideal photon purity. However, the microscopic electronic origin of these emitters and their compatibility with photonic cavities remain incompletely understood.
+GPAW and ASE were used for the electronic calculations; Meep was used for the two-dimensional nanobeam model. Reproducing a historical output is distinct from validating its physical interpretation. A measured emitter assignment would require converged defect and excited-state calculations, and a cavity claim would require a matched-material reference, source polarization and position, and a mode-resolved three-dimensional study.
 
-LrEmit2meep addresses this gap by providing a unified, first-principles workflow that connects:
-- defect chemistry →
-- localized electronic states →
-- optical transitions (ZPLs) →
-- cavity-enhanced emission dynamics.
+## Citation
 
-### Defects Studied
-
-The following defect configurations in monolayer h-BN are investigated:
-- Pristine h-BN (reference)
-- Boron vacancy (V_\mathrm{B})
-- Nitrogen vacancy (V_\mathrm{N})
-- Carbon substitution on boron site (C_\mathrm{B})
-- Carbon substitution on nitrogen site (C_\mathrm{N})
-- Carbon–nitrogen-vacancy complex (C–V_\mathrm{N})
-
-All models are based on a 5x5 supercell with sufficient vacuum separation to eliminate spurious interactions.
-
-### Computational Workflow 
-
-The end-to-end workflow implemented in this repository is:
-	1.	Atomic structure construction
-Pristine and defected h-BN supercells
-	2.	Spin-polarized DFT relaxation (GPAW)
-Geometry optimization and ground-state electronic structure
-	3.	Element-projected DOS (PDOS)
-Identification of localized defect-derived states
-	4.	Linear-response TDDFT (LR-TDDFT)
-Calculation of neutral excitation energies and ZPL candidates
-	5.	PDOS–ZPL correlation
-Direct overlay of ZPL energies onto PDOS spectra
-	6.	Photonic-crystal cavity modeling (MEEP)
-Nanobeam cavity design, mode extraction, and Purcell enhancement
-	7.	Emitter–cavity spectral matching
-Quantitative assessment of radiative lifetime reduction
-
-
-<img width="5048" height="2204" alt="workflow-3" src="https://github.com/user-attachments/assets/2f97521a-b271-454a-add5-90a504149e9f" />
-
-
-### Key Results
-
-| Category | Quantity | Value | Notes |
-|--------|--------|-------|-------|
-| **Electronic Structure** | Pristine h-BN band gap (PBE) | ~5.1 eV | Wide-gap insulating host |
-|  | Defect-induced gap (C\_B) | < 3.0 eV | Mid-gap defect levels |
-|  | Spin polarization | Yes (vacancy-related) | Enables spin–photon interfaces |
-| **Optical Properties (LR-TDDFT)** | ZPL (C\_B defect) | 2.17 eV (571.6 nm) | Visible SPE window |
-|  | ZPL linewidth (exp.) | ~3 nm | PLD-grown h-BN benchmark |
-| **Photonic Coupling (FDTD)** | Cavity resonance | 587.7 nm | Nanobeam cavity |
-|  | Quality factor (Q) | ~176 | Moderate-Q regime |
-|  | Peak Purcell factor | ~26 | Order-of-magnitude lifetime reduction |
-| **Experimental Benchmark** | Brightness | 466 kcps @ 216 µW | PLD h-BN (Science Adv. 2025) |
-|  | Single-photon purity | g²(0) = 0.015 (pulsed) | Near-ideal SPE |
-
-<img width="2700" height="1500" alt="purcell_spectrum" src="https://github.com/user-attachments/assets/17c84e36-53f2-4a67-ab69-fe8d1e0ef9cd" />
-
-
-### Software 
-	•	GPAW – real-space DFT and LR-TDDFT
-	•	ASE – atomic structure handling
-	•	MEEP – FDTD photonic simulations
-	•	NumPy / Matplotlib – data analysis and visualization
-
-
-### Citation
-
-
-
-
-
+Please cite the accompanying manuscript when using the analysis, and identify any archived result explicitly as a vertical or photonic screening quantity.
